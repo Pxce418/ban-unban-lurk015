@@ -1,0 +1,18 @@
+$nomention
+$onlyIf[$guildID!=;]
+$onlyAdmin[]
+$onlyIf[$isNumber[$message[1]]==true;Escribe Una **ID** Valida.]
+$onlyIf[$userExists[$message[1]]==true;Escribe Una **ID** Valida.]
+$onlyIf[$isBanned[$message[1]]==true;El Usuario No Esta Baneado.]
+$deletecommand 
+$unbanID[$message[1]]
+$author[✅️·Usuario desbaneado $serverName[$guildID]] 
+$authorIcon[$authorAvatar]
+$thumbnail[$userAvatar[$mentioned[1;yes]]]
+$description[
+👤・**Usuario**: $username[$message[1]] fue desbaneado.
+👑・**Moderador**: <@$authorID>
+🧷・**Razón**: $replaceText[$replaceText[$checkCondition[$noMentionMessage==];true;No definida.;1];false;$noMentionMessage;1]]
+$color[$random[99;99999]]
+$footer[$serverName[$guildID]]
+$footerIcon[$serverIcon[$guildID]]
