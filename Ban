@@ -1,0 +1,33 @@
+$nomention
+$onlyIf[$mentioned[1]!=$authorID;No puedes banearte ati mismo]
+$onlyIf[$mentioned[1]!=$serverOwner;No puedes banear el owner del servidor, IQ -0 ]
+$onlyIf[$mentioned[1]!=;Menciona un usuario para banear]
+$onlyPerms[ban;¡No tienes permisos para benear miembros!]
+$onlyBotPerms[ban;¡No tengo el permiso para benear miembros!]
+$onlyBotPerms[sendmessages;Necesito el permios de enviar mensajes!]
+$onlyIf[$rolePosition[$highestRole[$authorID]]<=$rolePosition[$highestRole[$mentioned[1]]];No puedes banear a alguien con un rol superior o igual al tuyo!]
+$onlyIf[$rolePosition[$highestRole[$botID]]<=$rolePosition[$highestRole[$mentioned[1]]];No puedo banear a alguien que tiene un rol superior al mio]
+
+$author[📛・COMANDO BAN $username]
+$thumbnail[$serverIcon]
+$authorIcon[$serverIcon]
+$description[
+**👤・Usuario Baneado:**
+$username[$mentioned[1]]
+
+**🚀・ID del usuario afectado:**
+$mentioned[1]
+
+**📬・Motivo de la sanción:**
+$noMentionMessage 
+
+**⚖️・Realizado por:**
+$username[$authorID]
+
+**⏱️・Fecha y hora del ban:**
+$date,$hour:$minute:$second]
+$footer[$serverName[$guildID] Administración del Servidor $addTimestamp]
+$footerIcon[$serverIcon]
+$color[#FF0000]
+$ban[$mentioned[1]]
+$deletecommand
